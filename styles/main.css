@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: Arial;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block {
+    height: 60vh;
+    width: 25vw;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 2px;
+    margin: 0 20px 0 0;
+    padding: 1em;
+    background-color: rgba(0,0,0,0.03);
+}
+
+.block-input {
+    padding: 0 0 0.8em 0;
+}
+
+.block-input label {
+    display: block;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+}
+
+.block:nth-child(2) .block-input:nth-child(5) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 10px;
+    text-align: right;
+    /* outline: 2px solid tomato !important; */
+}
+
+.block:nth-child(2) .block-input:nth-child(5) label:last-child{
+    flex-grow: 1;
+    /* outline: 2px solid tomato !important; */
+}
+
+.block:last-child {
+    text-transform: capitalize;
+}
+
+#item {
+    display: flex;
+    justify-content: space-evenly;
+}
+#item label {
+    font-weight: normal;
+}
+
+input:is([type="button"], [type="text"]), textarea {
+    width: 100%;
+    border-radius: 5px;
+    outline: 0;
+    padding: 7px 5px;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+input[type="text"]:focus {
+    border: 2px solid skyblue;
+}
+
+button {
+    outline: 0;
+    padding: 7px 5px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+button:focus, input[type="button"]:focus {
+    border: 2px solid skyblue; 
+}
+
+textarea {
+    resize: none;
+    height: 14ch;
+    text-transform: capitalize;
+}
+
+.keydown {
+    border: 2px solid skyblue !important;
+}
+
+.otl-red {
+    outline: 2px solid tomato !important;
+}
+
+.d-none {
+    display: none;
+}
+
+.modal-background {
+    position: fixed;
+    z-index: 999;
+    inset: 0;
+    background-color: rgba(0,0,0,0.8);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-window {
+    padding: 2em 1em;
+    width: 320px;
+    height: 240px;
+    background-color: white;
+    box-shadow: 0 0 10px black;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.modal-window .wrapper {
+    border: 1px solid ;
+    width: 100%;
+}
+
+.modal-window-title {
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 0.75em;
+}
+.modal-window-content {
+    font-size: 20px;
+}

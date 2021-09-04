@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <form name="displayForm" class="block">
+            <div class="block-input">
+                <label for="balance">Balance</label>
+                <input name="balance" id="balance" type="text" value="0 uah" disabled>
+            </div>
+            <div class="block-input">
+                <label for="beer">Beer</label>
+                <input name="beer" id="beer" type="text" value="0" disabled>
+            </div>
+            <div class="block-input">
+                <label for="wine">Wine</label>
+                <input name="wine" id="wine" type="text" value="0" disabled>
+            </div>
+            <div class="block-input">
+                <label for="pepsi">Pepsi</label>
+                <input name="pepsi" id="pepsi" type="text" value="0" disabled>
+            </div>
+        </form>
+        <form name="inputForm" class="block">
+            <div class="block-input">
+                <label for="amount">Enter amount</label>
+                <input name="amount" id="amount" type="text" pattern="^\d+$"required>
+            </div>
+            <div class="block-input">
+                <label for="item">Choose item</label>
+                <div id="item">
+                    <label for"item1">
+                        <input id="item1" type="radio" name="item" value="beer" checked> Beer
+                    </label>
+                    <label for"item2">
+                        <input id="item2" type="radio" name="item" value="wine"> Wine
+                    </label>
+                    <label for"item3">
+                        <input id="item3" type="radio" name="item" value="pepsi"> Pepsi
+                    </label>
+                </div>
+            </div>
+            <div class="block-input">
+                <input type="button" name="add" value="Add"> 
+            </div>
+            <div class="block-input">
+                <textarea id="bucket" name="bucket" disabled></textarea>
+            </div>
+            <div class="block-input">
+                <button name="cancel"><i class="fas fa-undo"></i></button>
+                <button name="clear"><i class="fas fa-broom"></i></button>
+                <label for="total">Total: <span id="total" name="total">0</span> uah</label>
+            </div>
+            <div class="block-input">
+                <input type="button" value="Buy" name="buy"> 
+            </div>
+        </form>
+        <div class="block" id="check"></div>
+    </div>
+    <div class="modal-background" style="display: none">
+        <div class="modal-window">
+            <div class="wrapper">
+                <div class="modal-window-title"></div>
+                <div class="modal-window-content"></div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="scripts/main.js"></script>
+</body>
+</html>
